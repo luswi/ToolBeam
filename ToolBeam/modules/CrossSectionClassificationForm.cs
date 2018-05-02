@@ -21,5 +21,11 @@ namespace ToolBeam.modules
         {
 
         }
+
+        private void hSection_Click(object sender, EventArgs e)
+        {
+            modules.hSectionForm hSection = new modules.hSectionForm();
+            hSection.Show();
+        }
     }
 }

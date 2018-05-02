@@ -63,9 +63,39 @@ namespace ToolBeam.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bSection {
+            get {
+                object obj = ResourceManager.GetObject("bSection", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CSclasses {
             get {
                 object obj = ResourceManager.GetObject("CSclasses", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hSection {
+            get {
+                object obj = ResourceManager.GetObject("hSection", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uSection {
+            get {
+                object obj = ResourceManager.GetObject("uSection", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

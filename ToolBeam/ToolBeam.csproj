@@ -58,6 +58,12 @@
     <Compile Include="modules\CrossSectionClassificationForm.Designer.cs">
       <DependentUpon>CrossSectionClassificationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="modules\hSectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\hSectionForm.Designer.cs">
+      <DependentUpon>hSectionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modules\CrossSectionClassificationForm.resx">
       <DependentUpon>CrossSectionClassificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modules\hSectionForm.resx">
+      <DependentUpon>hSectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,6 +103,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\CSclasses.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\hSection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\bSection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\uSection.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
