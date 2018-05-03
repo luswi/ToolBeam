@@ -11,9 +11,9 @@ using ToolBeam.classes;
 
 namespace ToolBeam
 {
-    public partial class Form1 : Form
+    public partial class ToolBeam : Form
     {
-        public Form1()
+        public ToolBeam()
         {
             InitializeComponent();
         }

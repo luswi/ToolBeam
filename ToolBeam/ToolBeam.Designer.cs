@@ -1,6 +1,6 @@
 ﻿namespace ToolBeam
 {
-    partial class Form1
+    partial class ToolBeam
     {
         /// <summary>
         /// Required designer variable.
