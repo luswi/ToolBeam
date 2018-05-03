@@ -113,5 +113,8 @@
   <ItemGroup>
     <None Include="img\uSection.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\hDim.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

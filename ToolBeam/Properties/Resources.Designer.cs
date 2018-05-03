@@ -83,6 +83,16 @@ namespace ToolBeam.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hDim {
+            get {
+                object obj = ResourceManager.GetObject("hDim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hSection {
             get {
                 object obj = ResourceManager.GetObject("hSection", resourceCulture);
