@@ -7,15 +7,17 @@ using System.Windows.Forms;
 
 namespace ToolBeam.classes
 {
-    class profileClass
+    public class profileClass
     {
         //Zmienne wykorzystywane do obliczen Klasy profilu
-        public int tfVar { get; set; }
+        public double tfVar { get; set; }
         public string material { get; set; }
         public double hVar { get; set; }
         public double bVar { get; set; }
-        
-
+        public double fyVar { get; set; }
+        public double fuVar { get; set; }
+        public string tescik { get; set; }
+       
 
         public bool obliczenia(profileClass v)
         {
@@ -29,21 +31,23 @@ namespace ToolBeam.classes
                     switch (material)
                     {
                         case "S235":
-                            double fyVarS235 = 235;
-                            double fuVarS235 = 360;
-                            MessageBox.Show(Convert.ToString(fyVarS235));
+                            fyVar = 235;
+                            fuVar = 360;
+                            //double fyVarS235 = 235;
+                            //double fuVarS235 = 360;
+                            //MessageBox.Show(Convert.ToString(fyVarS235));
                             break;
                         case "S275":
-                            double fyVarS275 = 275;
-                            double fuVarS275 = 360;
+                            fyVar = 275;
+                            fuVar = 360;
                             break;
                         case "S355":
-                            double fyVarS355 = 355;
-                            double fuVarS355 = 490;
+                            fyVar = 355;
+                            fuVar = 490;
                             break;
                         case "S450":
-                            double fyVarS450 = 440;
-                            double fuVarS450 = 550;
+                            fyVar = 440;
+                            fuVar = 550;
                             break;
                         default:
                             MessageBox.Show("Nic nie podano");
@@ -55,35 +59,44 @@ namespace ToolBeam.classes
                     switch (material)
                     {
                         case "S235":
-                            double fyVarS235 = 215;
-                            double fuVarS235 = 360;
-                            MessageBox.Show(Convert.ToString(fyVarS235));
+                            fyVar = 215;
+                            fuVar = 360;
+                            //MessageBox.Show(Convert.ToString(fyVarS235));
                             break;
                         case "S275":
-                            double fyVarS275 = 255;
-                            double fuVarS275 = 410;
+                            fyVar = 255;
+                            fuVar = 410;
                             break;
                         case "S355":
-                            double fyVarS355 = 335;
-                            double fuVarS355 = 470;
+                            fyVar = 335;
+                            fuVar = 470;
                             break;
                         case "S450":
-                            double fyVarS450 = 410;
-                            double fuVarS450 = 550;
+                            fyVar = 410;
+                            fuVar = 550;
                             break;
                         default:
                             MessageBox.Show("Nic nie podano");
                             break;
                     }
                 }
-                
+                // end material database
 
+                double epsilon;
+
+                //epsilon = Math.Sqrt(10/4);
+                epsilon = Math.Sqrt(fuVar/fyVar);
 
                 double odpowiedz;
 
                 odpowiedz = hVar + bVar;
 
                 MessageBox.Show(Convert.ToString(odpowiedz));
+                MessageBox.Show(Convert.ToString(epsilon));
+                MessageBox.Show(Convert.ToString(fyVar));
+                MessageBox.Show(Convert.ToString(fuVar));
+           
+
             }
             else
             {
@@ -101,6 +114,7 @@ namespace ToolBeam.classes
             return isSuccess;
 
         }
+
         
     }
 }
