@@ -17,6 +17,10 @@ namespace ToolBeam
         {
             InitializeComponent();
         }
+        //== for top move
+        private bool m_firstClick = false;
+        private Point m_firstClickLoc;
+        //== end
         profileClass v = new profileClass();
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,5 +35,27 @@ namespace ToolBeam
             crossSectionClassification.Show();
             //showdialog - fix window
         }
+
+        private void panelTop_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if(m_firstClick == false)
+                {
+                    m_firstClick = true;
+                    m_firstClickLoc = new Point(e.X, e.Y);
+                }
+                this.Location = new Point(
+                    this.Location.X + e.X - m_firstClickLoc.X,
+                    this.Location.Y + e.Y - m_firstClickLoc.Y
+                );
+            }
+            else
+            {
+                m_firstClick = false;
+            }
+        }
+
+
     }
 }
