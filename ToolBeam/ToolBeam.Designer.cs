@@ -133,9 +133,9 @@
             this.lbTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbTop.Location = new System.Drawing.Point(12, 9);
             this.lbTop.Name = "lbTop";
-            this.lbTop.Size = new System.Drawing.Size(324, 20);
+            this.lbTop.Size = new System.Drawing.Size(372, 20);
             this.lbTop.TabIndex = 0;
-            this.lbTop.Text = "ToolBeam [PN-EN 1993-1] && [NORSOK]";
+            this.lbTop.Text = "ToolBeam [PN-EN 1993-1] && [NORSOK] v.001";
             // 
             // panelMain
             // 
