@@ -39,14 +39,18 @@
             this.panelTop = new System.Windows.Forms.Panel();
             this.lbTop = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbClose = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // bCrossSectionClassification
             // 
-            this.bCrossSectionClassification.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.bCrossSectionClassification.BackColor = System.Drawing.Color.DarkOrange;
             this.bCrossSectionClassification.Location = new System.Drawing.Point(6, 19);
             this.bCrossSectionClassification.Name = "bCrossSectionClassification";
             this.bCrossSectionClassification.Size = new System.Drawing.Size(200, 80);
@@ -118,8 +122,10 @@
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelTop.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panelTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTop.Controls.Add(this.pictureBox1);
+            this.panelTop.Controls.Add(this.pbClose);
             this.panelTop.Controls.Add(this.lbTop);
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
@@ -146,6 +152,28 @@
             this.panelMain.Size = new System.Drawing.Size(800, 350);
             this.panelMain.TabIndex = 6;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ToolBeam.Properties.Resources.minimize;
+            this.pictureBox1.Location = new System.Drawing.Point(721, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pbClose
+            // 
+            this.pbClose.Image = global::ToolBeam.Properties.Resources.close;
+            this.pbClose.Location = new System.Drawing.Point(761, 3);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(34, 34);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClose.TabIndex = 1;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
             // ToolBeam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,6 +189,8 @@
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,6 +207,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox pbClose;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

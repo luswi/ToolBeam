@@ -56,6 +56,14 @@ namespace ToolBeam
             }
         }
 
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
