@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classes\beamClass.cs" />
+    <Compile Include="modules\SelectModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\SelectModule.Designer.cs">
+      <DependentUpon>SelectModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="ToolBeam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="modules\SelectModule.resx">
+      <DependentUpon>SelectModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ToolBeam.resx">
       <DependentUpon>ToolBeam.cs</DependentUpon>
     </EmbeddedResource>

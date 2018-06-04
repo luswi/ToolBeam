@@ -27,5 +27,21 @@ namespace ToolBeam.modules
             modules.hSectionForm hSection = new modules.hSectionForm();
             hSection.Show();
         }
+
+        private void b_Back_Click(object sender, EventArgs e)
+        {
+
+            this.Controls.Clear();
+            modules.SelectModule selectModule = new modules.SelectModule();
+            selectModule.TopLevel = false;
+            selectModule.AutoScroll = true;
+            this.Controls.Add(selectModule);
+            selectModule.Dock = DockStyle.Fill;
+            selectModule.Show();
+
+
+
+
+        }
     }
 }

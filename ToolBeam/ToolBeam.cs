@@ -31,8 +31,16 @@ namespace ToolBeam
 
         private void bCrossSectionClassification_Click(object sender, EventArgs e)
         {
+            panelMain.Controls.Clear();
             modules.CrossSectionClassificationForm crossSectionClassification = new modules.CrossSectionClassificationForm();
+            crossSectionClassification.TopLevel = false;
+            crossSectionClassification.AutoScroll = true;
+            panelMain.Controls.Add(crossSectionClassification);
+            crossSectionClassification.Dock = DockStyle.Fill;
             crossSectionClassification.Show();
+
+            //modules.CrossSectionClassificationForm crossSectionClassification = new modules.CrossSectionClassificationForm();
+            //crossSectionClassification.Show();
             //showdialog - fix window..
         }
 
@@ -64,6 +72,18 @@ namespace ToolBeam
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+            //panelMain.Controls.Clear();
+            modules.SelectModule selectModule = new modules.SelectModule();
+            selectModule.TopLevel = false;
+            selectModule.AutoScroll = true;
+            panelMain.Controls.Add(selectModule);
+            selectModule.Dock = DockStyle.Fill;
+            selectModule.Show();
+
         }
     }
 }

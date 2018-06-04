@@ -17,7 +17,13 @@ namespace ToolBeam.classes
         public double fyVar { get; set; }
         public double fuVar { get; set; }
         public string tescik { get; set; }
-       
+        public double epsilon { get; set; }
+        public double web { get; set; }
+        public double rVar { get; set; }
+        public double twVar { get; set; }
+        public string webClass { get; set; }
+        public double flange { get; set; }
+        public string flangeClass { get; set; }
 
         public bool obliczenia(profileClass v)
         {
@@ -82,10 +88,44 @@ namespace ToolBeam.classes
                 }
                 // end material database
 
-                double epsilon;
+                //double epsilon;
 
-                //epsilon = Math.Sqrt(10/4);
-                epsilon = Math.Sqrt(fuVar/fyVar);
+                //epsilon calc
+                epsilon = Math.Sqrt(235/fyVar);
+                //web calc
+                // c/t = (h-2(t.f+r))/t.w
+                web = (hVar - 2 * (tfVar + rVar)) / twVar;
+                //web slendernsess check
+                if (web <= 72*epsilon)
+                {
+                    webClass = "klasa 1";
+                }
+                else if (web <= 83*epsilon)
+                {
+                    webClass = "klasa 2";
+                }
+                else if (web <= 124*epsilon)
+                {
+                    webClass = "klasa 3";
+                }
+                // flange calc
+                // c/t = (0.5(b-t.w-2r))/t.f
+                flange = (0.5*(bVar - twVar - 2 * rVar)) / tfVar;
+                // flange slenderness check
+                if (flange <= 9*epsilon)
+                {
+                    //flan
+                }
+                else if (flange <= 10*epsilon)
+                {
+
+                }
+                else if (flange <= 14*epsilon)
+                {
+
+                }
+
+
 
                 double odpowiedz;
 
@@ -95,7 +135,7 @@ namespace ToolBeam.classes
                 MessageBox.Show(Convert.ToString(epsilon));
                 MessageBox.Show(Convert.ToString(fyVar));
                 MessageBox.Show(Convert.ToString(fuVar));
-           
+                
 
             }
             else

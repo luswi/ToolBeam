@@ -28,6 +28,10 @@ namespace ToolBeam.modules
             v.bVar = double.Parse(bVar.Text);
             v.tfVar = double.Parse(tfVar.Text);
             v.material = tbMaterial.Text;
+            v.rVar = double.Parse(rVar.Text);
+            v.twVar = double.Parse(twVar.Text);
+
+
 
             //var myInst = new profileClass();
             //var myInst = new obl
@@ -50,7 +54,13 @@ namespace ToolBeam.modules
             {
                 MessageBox.Show("cos poszlo zle");
             }
-            lbEpsilon.Text = Convert.ToString(v.fyVar);
+
+            lbEpsilonVar.Text = Convert.ToString(v.epsilon);
+            lbWebVar.Text = Convert.ToString(v.web);
+            lbWebClassVar.Text = v.webClass;
+            lbFlangeVar.Text = Convert.ToString(v.flange);
+
+            lbEpsilon2.Text = Convert.ToString(v.fyVar);
 
             //int liczbaA = 5;
             //int liczbaB = 10;

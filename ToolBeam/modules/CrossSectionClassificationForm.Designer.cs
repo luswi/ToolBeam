@@ -33,6 +33,7 @@
             this.hSection = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.b_Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -87,13 +88,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // b_Back
+            // 
+            this.b_Back.Location = new System.Drawing.Point(27, 315);
+            this.b_Back.Name = "b_Back";
+            this.b_Back.Size = new System.Drawing.Size(75, 23);
+            this.b_Back.TabIndex = 5;
+            this.b_Back.Text = "Back";
+            this.b_Back.UseVisualStyleBackColor = true;
+            this.b_Back.Click += new System.EventHandler(this.b_Back_Click);
+            // 
             // CrossSectionClassificationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 350);
+            this.Controls.Add(this.b_Back);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrossSectionClassificationForm";
             this.Text = "CrossSectionClassification";
             this.Load += new System.EventHandler(this.CrossSectionClassificationForm_Load);
@@ -110,5 +123,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button b_Back;
     }
 }
