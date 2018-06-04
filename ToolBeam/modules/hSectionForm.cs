@@ -59,6 +59,7 @@ namespace ToolBeam.modules
             lbWebVar.Text = Convert.ToString(v.web);
             lbWebClassVar.Text = v.webClass;
             lbFlangeVar.Text = Convert.ToString(v.flange);
+            lbFlangeClassVar.Text = v.flangeClass;
 
             lbEpsilon2.Text = Convert.ToString(v.fyVar);
 

@@ -108,33 +108,41 @@ namespace ToolBeam.classes
                 {
                     webClass = "klasa 3";
                 }
+                else if (web > 124*epsilon)
+                {
+                    webClass = "klasa 4";
+                }
                 // flange calc
                 // c/t = (0.5(b-t.w-2r))/t.f
                 flange = (0.5*(bVar - twVar - 2 * rVar)) / tfVar;
                 // flange slenderness check
                 if (flange <= 9*epsilon)
                 {
-                    //flan
+                    flangeClass = "Klasa 1";
                 }
                 else if (flange <= 10*epsilon)
                 {
-
+                    flangeClass = "Klasa 2";
                 }
                 else if (flange <= 14*epsilon)
                 {
-
+                    flangeClass = "Klasa 3";
+                }
+                else if (flange > 14*epsilon)
+                {
+                    flangeClass = "Klasa 4";
                 }
 
 
 
-                double odpowiedz;
+                //double odpowiedz;
 
-                odpowiedz = hVar + bVar;
+                //odpowiedz = hVar + bVar;
 
-                MessageBox.Show(Convert.ToString(odpowiedz));
-                MessageBox.Show(Convert.ToString(epsilon));
-                MessageBox.Show(Convert.ToString(fyVar));
-                MessageBox.Show(Convert.ToString(fuVar));
+                //MessageBox.Show(Convert.ToString(odpowiedz));
+                //MessageBox.Show(Convert.ToString(epsilon));
+                //MessageBox.Show(Convert.ToString(fyVar));
+                //MessageBox.Show(Convert.ToString(fuVar));
                 
 
             }
