@@ -33,7 +33,7 @@ namespace ToolBeam
         {
             modules.CrossSectionClassificationForm crossSectionClassification = new modules.CrossSectionClassificationForm();
             crossSectionClassification.Show();
-            //showdialog - fix window.
+            //showdialog - fix window..
         }
 
         private void panelTop_MouseMove(object sender, MouseEventArgs e)
