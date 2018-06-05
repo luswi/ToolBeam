@@ -40,7 +40,7 @@ namespace ToolBeam.modules
 
             //wysylanie do obliczen
 
-            bool success = v.obliczenia(v);
+            bool success = v.calculations(v);
             if (success == true)
             {
                 // Label epsilon

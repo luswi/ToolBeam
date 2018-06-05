@@ -25,7 +25,7 @@ namespace ToolBeam.classes
         public double flange { get; set; }
         public string flangeClass { get; set; }
 
-        public bool obliczenia(profileClass v)
+        public bool calculations(profileClass v)
         {
             bool isSuccess = false;
             if (bVar > 0)
