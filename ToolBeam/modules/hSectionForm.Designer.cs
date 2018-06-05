@@ -50,6 +50,8 @@
             this.tbMaterial = new System.Windows.Forms.TextBox();
             this.lbEpsilon2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbFlangeClassVar = new System.Windows.Forms.Label();
+            this.lbFlangeClass = new System.Windows.Forms.Label();
             this.lbFlangeVar = new System.Windows.Forms.Label();
             this.lbFlange = new System.Windows.Forms.Label();
             this.lbWebClassVar = new System.Windows.Forms.Label();
@@ -58,8 +60,6 @@
             this.lbWeb = new System.Windows.Forms.Label();
             this.lbEpsilon = new System.Windows.Forms.Label();
             this.lbEpsilonVar = new System.Windows.Forms.Label();
-            this.lbFlangeClass = new System.Windows.Forms.Label();
-            this.lbFlangeClassVar = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -292,6 +292,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Results";
             // 
+            // lbFlangeClassVar
+            // 
+            this.lbFlangeClassVar.AutoSize = true;
+            this.lbFlangeClassVar.Location = new System.Drawing.Point(82, 130);
+            this.lbFlangeClassVar.Name = "lbFlangeClassVar";
+            this.lbFlangeClassVar.Size = new System.Drawing.Size(32, 13);
+            this.lbFlangeClassVar.TabIndex = 24;
+            this.lbFlangeClassVar.Text = "result";
+            // 
+            // lbFlangeClass
+            // 
+            this.lbFlangeClass.AutoSize = true;
+            this.lbFlangeClass.Location = new System.Drawing.Point(6, 130);
+            this.lbFlangeClass.Name = "lbFlangeClass";
+            this.lbFlangeClass.Size = new System.Drawing.Size(70, 13);
+            this.lbFlangeClass.TabIndex = 23;
+            this.lbFlangeClass.Text = "Flange Class:";
+            // 
             // lbFlangeVar
             // 
             this.lbFlangeVar.AutoSize = true;
@@ -363,24 +381,6 @@
             this.lbEpsilonVar.Size = new System.Drawing.Size(32, 13);
             this.lbEpsilonVar.TabIndex = 15;
             this.lbEpsilonVar.Text = "result";
-            // 
-            // lbFlangeClass
-            // 
-            this.lbFlangeClass.AutoSize = true;
-            this.lbFlangeClass.Location = new System.Drawing.Point(6, 130);
-            this.lbFlangeClass.Name = "lbFlangeClass";
-            this.lbFlangeClass.Size = new System.Drawing.Size(70, 13);
-            this.lbFlangeClass.TabIndex = 23;
-            this.lbFlangeClass.Text = "Flange Class:";
-            // 
-            // lbFlangeClassVar
-            // 
-            this.lbFlangeClassVar.AutoSize = true;
-            this.lbFlangeClassVar.Location = new System.Drawing.Point(82, 130);
-            this.lbFlangeClassVar.Name = "lbFlangeClassVar";
-            this.lbFlangeClassVar.Size = new System.Drawing.Size(32, 13);
-            this.lbFlangeClassVar.TabIndex = 24;
-            this.lbFlangeClassVar.Text = "result";
             // 
             // hSectionForm
             // 
