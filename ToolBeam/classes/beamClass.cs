@@ -9,7 +9,7 @@ namespace ToolBeam.classes
 {
     public class profileClass
     {
-        //Zmienne wykorzystywane do obliczen Klasy profilu
+        // Variables used for calculations
         public double tfVar { get; set; }
         public string material { get; set; }
         public double hVar { get; set; }
@@ -24,6 +24,7 @@ namespace ToolBeam.classes
         public string webClass { get; set; }
         public double flange { get; set; }
         public string flangeClass { get; set; }
+        //public string cbtest { get; set; }
 
         public bool calculations(profileClass v)
         {
@@ -31,7 +32,7 @@ namespace ToolBeam.classes
             if (bVar > 0)
             {
                 isSuccess = true;
-                // materials database
+                // Materials database
                 if(tfVar <= 40)
                 {
                     switch (material)
@@ -39,9 +40,6 @@ namespace ToolBeam.classes
                         case "S235":
                             fyVar = 235;
                             fuVar = 360;
-                            //double fyVarS235 = 235;
-                            //double fuVarS235 = 360;
-                            //MessageBox.Show(Convert.ToString(fyVarS235));
                             break;
                         case "S275":
                             fyVar = 275;
@@ -67,7 +65,6 @@ namespace ToolBeam.classes
                         case "S235":
                             fyVar = 215;
                             fuVar = 360;
-                            //MessageBox.Show(Convert.ToString(fyVarS235));
                             break;
                         case "S275":
                             fyVar = 255;
@@ -86,64 +83,50 @@ namespace ToolBeam.classes
                             break;
                     }
                 }
-                // end material database
+                // End material database
 
-                //double epsilon;
-
-                //epsilon calc
+                // Epsilon calc
                 epsilon = Math.Sqrt(235/fyVar);
-                //web calc
+                // Web calc
                 // c/t = (h-2(t.f+r))/t.w
                 web = (hVar - 2 * (tfVar + rVar)) / twVar;
-                //web slendernsess check
+                // Web slendernsess check
                 if (web <= 72*epsilon)
                 {
-                    webClass = "klasa 1";
+                    webClass = "Class 1";
                 }
                 else if (web <= 83*epsilon)
                 {
-                    webClass = "klasa 2";
+                    webClass = "Class 2";
                 }
                 else if (web <= 124*epsilon)
                 {
-                    webClass = "klasa 3";
+                    webClass = "Class 3";
                 }
                 else if (web > 124*epsilon)
                 {
-                    webClass = "klasa 4";
+                    webClass = "Class 4";
                 }
-                // flange calc
+                // Flange calc
                 // c/t = (0.5(b-t.w-2r))/t.f
                 flange = (0.5*(bVar - twVar - 2 * rVar)) / tfVar;
-                // flange slenderness check
+                // Flange slenderness check
                 if (flange <= 9*epsilon)
                 {
-                    flangeClass = "Klasa 1";
+                    flangeClass = "Class 1";
                 }
                 else if (flange <= 10*epsilon)
                 {
-                    flangeClass = "Klasa 2";
+                    flangeClass = "Class 2";
                 }
                 else if (flange <= 14*epsilon)
                 {
-                    flangeClass = "Klasa 3";
+                    flangeClass = "Class 3";
                 }
                 else if (flange > 14*epsilon)
                 {
-                    flangeClass = "Klasa 4";
+                    flangeClass = "Class 4";
                 }
-
-
-
-                //double odpowiedz;
-
-                //odpowiedz = hVar + bVar;
-
-                //MessageBox.Show(Convert.ToString(odpowiedz));
-                //MessageBox.Show(Convert.ToString(epsilon));
-                //MessageBox.Show(Convert.ToString(fyVar));
-                //MessageBox.Show(Convert.ToString(fuVar));
-                
 
             }
             else
@@ -151,14 +134,7 @@ namespace ToolBeam.classes
                 isSuccess = false;
                 
             }
-            //int liczbaA = 5;
-            //int liczbaB = 10;
-            //int answer;
-
-            //answer = liczbaA + liczbaB;
-
-            //string pozmianie = Convert.ToString(answer);
-            //MessageBox.Show(liczbaA);
+            
             return isSuccess;
 
         }

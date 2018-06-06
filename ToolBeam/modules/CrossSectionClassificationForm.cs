@@ -24,8 +24,14 @@ namespace ToolBeam.modules
 
         private void hSection_Click(object sender, EventArgs e)
         {
-            modules.hSectionForm hSection = new modules.hSectionForm();
-            hSection.Show();
+            this.Controls.Clear();
+            modules.hSectionForm hSectionForm = new modules.hSectionForm();
+            hSectionForm.TopLevel = false;
+            hSectionForm.AutoScroll = true;
+            this.Controls.Add(hSectionForm);
+            hSectionForm.Dock = DockStyle.Fill;
+            hSectionForm.Show();
+            
         }
 
         private void b_Back_Click(object sender, EventArgs e)

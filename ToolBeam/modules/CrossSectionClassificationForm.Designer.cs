@@ -41,7 +41,7 @@
             // button2
             // 
             this.button2.Image = global::ToolBeam.Properties.Resources.uSection;
-            this.button2.Location = new System.Drawing.Point(128, 51);
+            this.button2.Location = new System.Drawing.Point(112, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 100);
             this.button2.TabIndex = 2;
@@ -50,7 +50,7 @@
             // button3
             // 
             this.button3.Image = global::ToolBeam.Properties.Resources.bSection;
-            this.button3.Location = new System.Drawing.Point(234, 51);
+            this.button3.Location = new System.Drawing.Point(218, 19);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 100);
             this.button3.TabIndex = 3;
@@ -59,7 +59,7 @@
             // hSection
             // 
             this.hSection.Image = global::ToolBeam.Properties.Resources.hSection;
-            this.hSection.Location = new System.Drawing.Point(22, 51);
+            this.hSection.Location = new System.Drawing.Point(6, 19);
             this.hSection.Name = "hSection";
             this.hSection.Size = new System.Drawing.Size(100, 100);
             this.hSection.TabIndex = 1;
@@ -69,28 +69,30 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ToolBeam.Properties.Resources.CSclasses;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(471, 19);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(286, 253);
+            this.pictureBox1.Size = new System.Drawing.Size(315, 207);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.b_Back);
             this.groupBox1.Controls.Add(this.hSection);
             this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(323, 33);
+            this.groupBox1.Location = new System.Drawing.Point(3, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 232);
+            this.groupBox1.Size = new System.Drawing.Size(792, 340);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Select profile";
             // 
             // b_Back
             // 
-            this.b_Back.Location = new System.Drawing.Point(27, 315);
+            this.b_Back.Location = new System.Drawing.Point(9, 310);
             this.b_Back.Name = "b_Back";
             this.b_Back.Size = new System.Drawing.Size(75, 23);
             this.b_Back.TabIndex = 5;
@@ -103,9 +105,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 350);
-            this.Controls.Add(this.b_Back);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrossSectionClassificationForm";
             this.Text = "CrossSectionClassification";
