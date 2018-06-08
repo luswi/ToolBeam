@@ -25,7 +25,7 @@ namespace ToolBeam.modules
         private void hSection_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
-            modules.hSectionForm hSectionForm = new modules.hSectionForm();
+            modules.iSectionForm hSectionForm = new modules.iSectionForm();
             hSectionForm.TopLevel = false;
             hSectionForm.AutoScroll = true;
             this.Controls.Add(hSectionForm);

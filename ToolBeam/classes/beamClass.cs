@@ -24,13 +24,19 @@ namespace ToolBeam.classes
         public string webClass { get; set; }
         public double flange { get; set; }
         public string flangeClass { get; set; }
-        //public string cbtest { get; set; }
+        public bool rbBending { get; set; }
+        public bool rbCompression { get; set; }
+        public bool rbBendingCompression { get; set; }
+        public double force { get; set; }
+        public double alphaN { get; set; }
 
-        public bool calculations(profileClass v)
+
+        public bool iCalc(profileClass v)
         {
             bool isSuccess = false;
             if (bVar > 0)
             {
+                
                 isSuccess = true;
                 // Materials database
                 if(tfVar <= 40)
@@ -85,48 +91,158 @@ namespace ToolBeam.classes
                 }
                 // End material database
 
-                // Epsilon calc
-                epsilon = Math.Sqrt(235/fyVar);
-                // Web calc
-                // c/t = (h-2(t.f+r))/t.w
-                web = (hVar - 2 * (tfVar + rVar)) / twVar;
-                // Web slendernsess check
-                if (web <= 72*epsilon)
+
+                //=============================Bending======================//
+                if(rbBending == true)
                 {
-                    webClass = "Class 1";
+                    // Epsilon calc
+                    epsilon = Math.Round(Math.Sqrt(235 / fyVar), 2);
+                    // Web calc
+                    // c/t = (h-2(t.f+r))/t.w
+                    web = Math.Round(((hVar - 2 * (tfVar + rVar)) / twVar), 2);
+                    
+                    // Web slendernsess check
+                    if (web <= 72 * epsilon)
+                    {
+                        webClass = "Class 1";
+                        
+                    }
+                    else if (web <= 83 * epsilon)
+                    {
+                        webClass = "Class 2";
+                    }
+                    else if (web <= 124 * epsilon)
+                    {
+                        webClass = "Class 3";
+                    }
+                    else if (web > 124 * epsilon)
+                    {
+                        webClass = "Class 4";
+                    }
+                    // Flange calc
+                    // c/t = (0.5(b-t.w-2r))/t.f
+                    flange = Math.Round(((0.5 * (bVar - twVar - 2 * rVar)) / tfVar), 2);
+                    // Flange slenderness check
+                    if (flange <= 9 * epsilon)
+                    {
+                        flangeClass = "Class 1";
+                    }
+                    else if (flange <= 10 * epsilon)
+                    {
+                        flangeClass = "Class 2";
+                    }
+                    else if (flange <= 14 * epsilon)
+                    {
+                        flangeClass = "Class 3";
+                    }
+                    else if (flange > 14 * epsilon)
+                    {
+                        flangeClass = "Class 4";
+                    }
                 }
-                else if (web <= 83*epsilon)
+                //=============================Compression======================//
+                else if (rbCompression == true)
                 {
-                    webClass = "Class 2";
+                    // Epsilon calc
+                    epsilon = Math.Round(Math.Sqrt(235 / fyVar), 2);
+                    // Web calc
+                    // c/t = (h-2(t.f+r))/t.w
+                    web = Math.Round(((hVar - 2 * (tfVar + rVar)) / twVar), 2);
+                    // Web slendernsess check
+                    if (web <= 33 * epsilon)
+                    {
+                        webClass = "Class 1";
+                    }
+                    else if (web <= 38 * epsilon)
+                    {
+                        webClass = "Class 2";
+                    }
+                    else if (web <= 42 * epsilon)
+                    {
+                        webClass = "Class 3";
+                    }
+                    else if (web > 42 * epsilon)
+                    {
+                        webClass = "Class 4";
+                    }
+                    // Flange calc
+                    // c/t = (0.5(b-t.w-2r))/t.f
+                    flange = Math.Round(((0.5 * (bVar - twVar - 2 * rVar)) / tfVar), 2);
+                    // Flange slenderness check
+                    if (flange <= 9 * epsilon)
+                    {
+                        flangeClass = "Class 1";
+                    }
+                    else if (flange <= 10 * epsilon)
+                    {
+                        flangeClass = "Class 2";
+                    }
+                    else if (flange <= 14 * epsilon)
+                    {
+                        flangeClass = "Class 3";
+                    }
+                    else if (flange > 14 * epsilon)
+                    {
+                        flangeClass = "Class 4";
+                    }
                 }
-                else if (web <= 124*epsilon)
+                //=============================Bending&Compression======================//
+                else if (rbBendingCompression == true)
                 {
-                    webClass = "Class 3";
+
+
+                    // Epsilon calc
+                    epsilon = Math.Round(Math.Sqrt(235 / fyVar), 2);
+                    // Flange calc
+                    // c/t = (0.5(b-t.w-2r))/t.f
+                    flange = Math.Round(((0.5 * (bVar - twVar - 2 * rVar)) / tfVar), 2);
+                    // Flange slenderness check
+                    if (flange <= 9 * epsilon)
+                    {
+                        flangeClass = "Class 1";
+                    }
+                    else if (flange <= 10 * epsilon)
+                    {
+                        flangeClass = "Class 2";
+                    }
+                    else if (flange <= 14 * epsilon)
+                    {
+                        flangeClass = "Class 3";
+                    }
+                    else if (flange > 14 * epsilon)
+                    {
+                        flangeClass = "Class 4";
+                    }
+                    // Web calc
+                    //Krok1 sprawdzamy warunki smuklosci jak dla scianki osiowo sciskanej - dla najbardziej niekorzystnego rozkladu naprezen,
+                    //aby sprawdzic czy sa potrzebne bardziej szczegolowe obliczenia
+                    //
+                    //
+                    // c/t = (h-2(t.f+r))/t.w
+                    web = Math.Round(((hVar - 2 * (tfVar + rVar)) / twVar), 2);
+                    // Web slendernsess check
+                    if (web <= 33 * epsilon)
+                    {
+                        webClass = "Class 1";
+                    }
+                    else if (web <= 38 * epsilon)
+                    {
+                        webClass = "Class 2";
+                    }
+                    else if (web <= 42 * epsilon)
+                    {
+                        webClass = "Class 3";
+                    }
+                    else if (web > 42 * epsilon)
+                    {
+                        webClass = "Class 4";
+                        // Trzeba sprawdzic szczegolowo i udowodnic, ze srodnik nie nalezy do klasy 4. Zakladamy plastyczny rozklad naprezen.
+                        alphaN = Math.Round(((force * 1000) / (twVar * fyVar)), 2);
+                        MessageBox.Show(Convert.ToString(alphaN));
+                    }
                 }
-                else if (web > 124*epsilon)
-                {
-                    webClass = "Class 4";
-                }
-                // Flange calc
-                // c/t = (0.5(b-t.w-2r))/t.f
-                flange = (0.5*(bVar - twVar - 2 * rVar)) / tfVar;
-                // Flange slenderness check
-                if (flange <= 9*epsilon)
-                {
-                    flangeClass = "Class 1";
-                }
-                else if (flange <= 10*epsilon)
-                {
-                    flangeClass = "Class 2";
-                }
-                else if (flange <= 14*epsilon)
-                {
-                    flangeClass = "Class 3";
-                }
-                else if (flange > 14*epsilon)
-                {
-                    flangeClass = "Class 4";
-                }
+
+                
 
             }
             else

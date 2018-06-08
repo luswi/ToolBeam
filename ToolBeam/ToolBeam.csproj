@@ -70,11 +70,11 @@
     <Compile Include="modules\CrossSectionClassificationForm.Designer.cs">
       <DependentUpon>CrossSectionClassificationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="modules\hSectionForm.cs">
+    <Compile Include="modules\iSectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modules\hSectionForm.Designer.cs">
-      <DependentUpon>hSectionForm.cs</DependentUpon>
+    <Compile Include="modules\iSectionForm.Designer.cs">
+      <DependentUpon>iSectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,8 +90,8 @@
     <EmbeddedResource Include="modules\CrossSectionClassificationForm.resx">
       <DependentUpon>CrossSectionClassificationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modules\hSectionForm.resx">
-      <DependentUpon>hSectionForm.cs</DependentUpon>
+    <EmbeddedResource Include="modules\iSectionForm.resx">
+      <DependentUpon>iSectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

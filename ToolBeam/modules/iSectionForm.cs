@@ -11,11 +11,12 @@ using ToolBeam.classes;
 
 namespace ToolBeam.modules
 {
-    public partial class hSectionForm : Form
+    public partial class iSectionForm : Form
     {
-        public hSectionForm()
+        public iSectionForm()
         {
             InitializeComponent();
+            
         }
 
         profileClass v = new profileClass();
@@ -30,9 +31,14 @@ namespace ToolBeam.modules
             v.material = cbMaterialSelection.SelectedItem.ToString();
             v.rVar = double.Parse(rVar.Text);
             v.twVar = double.Parse(twVar.Text);
+            v.rbBending = rbBending.Checked;
+            v.rbCompression = rbCompression.Checked;
+            v.rbBendingCompression = rbBendingCompression.Checked;
+            v.force = double.Parse(tbCf.Text);
+            
 
             // Send for calculations
-            bool success = v.calculations(v);
+            bool success = v.iCalc(v);
             if (success == true)
             {
                 
@@ -243,6 +249,30 @@ namespace ToolBeam.modules
 
         private void cbMaterialSelection_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            bCalculateClass.PerformClick();
+        }
+
+        private void rbBending_CheckedChanged(object sender, EventArgs e)
+        {
+            lbCf.Visible = false;
+            lbUnit.Visible = false;
+            tbCf.Visible = false;
+            bCalculateClass.PerformClick();
+        }
+
+        private void rbCompression_CheckedChanged(object sender, EventArgs e)
+        {
+            lbCf.Visible = false;
+            lbUnit.Visible = false;
+            tbCf.Visible = false;
+            bCalculateClass.PerformClick();
+        }
+
+        private void rbBendingCompression_CheckedChanged(object sender, EventArgs e)
+        {
+            lbCf.Visible = true;
+            lbUnit.Visible = true;
+            tbCf.Visible = true;
             bCalculateClass.PerformClick();
         }
     }
