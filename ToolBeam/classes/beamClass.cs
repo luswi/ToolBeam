@@ -29,6 +29,9 @@ namespace ToolBeam.classes
         public bool rbBendingCompression { get; set; }
         public double force { get; set; }
         public double alphaN { get; set; }
+        public double alpha { get; set; }
+        public double aVar { get; set; }
+        public int psi { get; set; }
 
 
         public bool iCalc(profileClass v)
@@ -239,8 +242,61 @@ namespace ToolBeam.classes
                         // Trzeba sprawdzic szczegolowo i udowodnic, ze srodnik nie nalezy do klasy 4. Zakladamy plastyczny rozklad naprezen.
                         alphaN = Math.Round(((force * 1000) / (twVar * fyVar)), 2);
                         MessageBox.Show(Convert.ToString(alphaN));
+                        // alpha = (c + alphaN)/2c
+                        alpha = ((hVar - 2 * (tfVar + rVar)) + alphaN) / (2 * (hVar - 2 * (tfVar + rVar)));
+                        MessageBox.Show(Convert.ToString(alpha));
+                        if (alpha > 0)
+                        {
+                            if (alpha > 0.5)
+                            {
+                                //sprawdzanie dla klasy 1 i 2
+                                double licz1 = (396 * epsilon) / ((13 * alpha) - 1);
+                                double licz2 = (456 * epsilon) / ((13 * alpha) - 1);
+                                if (licz1 >= web)
+                                {
+                                    MessageBox.Show("klasa1");
+                                }
+                                else if (licz2 >= web)
+                                {
+                                    MessageBox.Show("klasa2");
+
+                                }
+                                else
+                                //srodnik nie spelnia warunkow klasy 2. Nalezy wyznaczyc smuklosc graniczna scianki klasy 3 przyjmujac sprezysty rozklad naprezen.
+                                {
+                                    //MessageBox.Show("sprezysty ?");
+                                    psi = ((2 * Convert.ToInt16(force) * 1000) / Convert.ToInt16(aVar) * 100 * Convert.ToInt16(fyVar)) - 1;
+                                    MessageBox.Show(Convert.ToString(psi));
+                                }
+
+                            }
+                        else if (alpha <= 0.5)
+                            {
+                                //sprawdzanie dla klasy 1 i 2
+                                double licz1 = (36 * epsilon) / alpha;
+                                double licz2 = (41.5 * epsilon) / alpha;
+                                if (licz1 >= web)
+                                {
+                                    MessageBox.Show("klasa1");
+                                }
+                                else if (licz2 >= web)
+                                {
+                                    MessageBox.Show("klasa2");
+                                }
+                                else
+                                {
+                                    psi = ((2 * Convert.ToInt16(force) * 1000) / Convert.ToInt16(aVar) * 100 * Convert.ToInt16(fyVar)) - 1;
+                                    MessageBox.Show(Convert.ToString(psi));
+                                }
+
+                            }
+
+                        }
+
+}
+
                     }
-                }
+                
 
                 
 

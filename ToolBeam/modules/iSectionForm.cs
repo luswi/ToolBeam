@@ -35,9 +35,11 @@ namespace ToolBeam.modules
             v.rbCompression = rbCompression.Checked;
             v.rbBendingCompression = rbBendingCompression.Checked;
             v.force = double.Parse(tbCf.Text);
+            v.aVar = double.Parse(tbArea.Text);
+            
             
 
-            // Send for calculations
+            // results
             bool success = v.iCalc(v);
             if (success == true)
             {
@@ -47,6 +49,7 @@ namespace ToolBeam.modules
                 lbWebClassVar.Text = v.webClass;
                 lbFlangeVar.Text = Convert.ToString(v.flange);
                 lbFlangeClassVar.Text = v.flangeClass;
+                tbArea.Text = Convert.ToString(v.aVar);
                 
             }
             else
@@ -100,6 +103,9 @@ namespace ToolBeam.modules
                     twVar.Text = "3.8";
                     tfVar.Text = "5.2";
                     rVar.Text = "5";
+                    tbArea.Text = "7.64";
+
+                    
                     break;
                 case "100":
                     hVar.Text = "100";
@@ -107,6 +113,7 @@ namespace ToolBeam.modules
                     twVar.Text = "4.1";
                     tfVar.Text = "5.7";
                     rVar.Text = "7";
+                    tbArea.Text = "10.3";
                     break;
                 case "120":
                     hVar.Text = "120";
@@ -114,6 +121,7 @@ namespace ToolBeam.modules
                     twVar.Text = "4.4";
                     tfVar.Text = "6.3";
                     rVar.Text = "7";
+                    tbArea.Text = "13.2";
                     break;
                 case "140":
                     hVar.Text = "140";
@@ -121,6 +129,7 @@ namespace ToolBeam.modules
                     twVar.Text = "4.7";
                     tfVar.Text = "6.9";
                     rVar.Text = "7";
+                    tbArea.Text = "16.4";
                     break;
                 case "160":
                     hVar.Text = "160";
@@ -128,6 +137,7 @@ namespace ToolBeam.modules
                     twVar.Text = "5";
                     tfVar.Text = "7.7";
                     rVar.Text = "9";
+                    tbArea.Text = "20.1";
                     break;
                 case "180":
                     hVar.Text = "180";
@@ -135,6 +145,7 @@ namespace ToolBeam.modules
                     twVar.Text = "5.3";
                     tfVar.Text = "8";
                     rVar.Text = "9";
+                    tbArea.Text = "23.9";
                     break;
                 case "200":
                     hVar.Text = "200";
@@ -142,6 +153,7 @@ namespace ToolBeam.modules
                     twVar.Text = "5.6";
                     tfVar.Text = "8.5";
                     rVar.Text = "12";
+                    tbArea.Text = "28.5";
                     break;
                 case "220":
                     hVar.Text = "220";
@@ -149,6 +161,7 @@ namespace ToolBeam.modules
                     twVar.Text = "5.9";
                     tfVar.Text = "9.2";
                     rVar.Text = "12";
+                    tbArea.Text = "33.4";
                     break;
                 case "240":
                     hVar.Text = "240";
@@ -156,6 +169,7 @@ namespace ToolBeam.modules
                     twVar.Text = "6.2";
                     tfVar.Text = "9.8";
                     rVar.Text = "15";
+                    tbArea.Text = "39.1";
                     break;
                 case "270":
                     hVar.Text = "270";
@@ -163,6 +177,7 @@ namespace ToolBeam.modules
                     twVar.Text = "6.6";
                     tfVar.Text = "10.2";
                     rVar.Text = "15";
+                    tbArea.Text = "45.9";
                     break;
                 case "300":
                     hVar.Text = "300";
@@ -170,6 +185,7 @@ namespace ToolBeam.modules
                     twVar.Text = "7.1";
                     tfVar.Text = "10.7";
                     rVar.Text = "15";
+                    tbArea.Text = "53.8";
                     break;
                 case "330":
                     hVar.Text = "330";
@@ -177,6 +193,7 @@ namespace ToolBeam.modules
                     twVar.Text = "7.5";
                     tfVar.Text = "11.5";
                     rVar.Text = "18";
+                    tbArea.Text = "62.5";
                     break;
                 case "360":
                     hVar.Text = "360";
@@ -184,6 +201,7 @@ namespace ToolBeam.modules
                     twVar.Text = "8";
                     tfVar.Text = "12.7";
                     rVar.Text = "18";
+                    tbArea.Text = "72.7";
                     break;
                 case "400":
                     hVar.Text = "400";
@@ -191,6 +209,7 @@ namespace ToolBeam.modules
                     twVar.Text = "8.6";
                     tfVar.Text = "13.5";
                     rVar.Text = "21";
+                    tbArea.Text = "84.5";
                     break;
                 case "450":
                     hVar.Text = "450";
@@ -198,6 +217,7 @@ namespace ToolBeam.modules
                     twVar.Text = "9.4";
                     tfVar.Text = "14.6";
                     rVar.Text = "21";
+                    tbArea.Text = "98.8";
                     break;
                 case "500":
                     hVar.Text = "500";
@@ -205,6 +225,7 @@ namespace ToolBeam.modules
                     twVar.Text = "10.2";
                     tfVar.Text = "16";
                     rVar.Text = "21";
+                    tbArea.Text = "116";
                     break;
                 case "550":
                     hVar.Text = "550";
@@ -212,6 +233,7 @@ namespace ToolBeam.modules
                     twVar.Text = "11.1";
                     tfVar.Text = "17.2";
                     rVar.Text = "24";
+                    tbArea.Text = "134";
                     break;
                 case "600":
                     hVar.Text = "600";
@@ -219,6 +241,7 @@ namespace ToolBeam.modules
                     twVar.Text = "12";
                     tfVar.Text = "19";
                     rVar.Text = "24";
+                    tbArea.Text = "156";
                     break;
             }
             bCalculateClass.PerformClick();
