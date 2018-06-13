@@ -31,8 +31,25 @@ namespace ToolBeam.classes
         public double alphaN { get; set; }
         public double alpha { get; set; }
         public double aVar { get; set; }
-        public int psi { get; set; }
+        public double psi { get; set; }
+        public double psiCalc { get; set; }
 
+        public void psiFunction()
+        {
+            //MessageBox.Show("sprezysty ?");
+            psi = ((2.0 * force * 1000) / (aVar * 100.0 * fyVar) - 1.0);
+            if (psi > -1)
+            {
+                psiCalc = ((42 * epsilon) / (0.67 + 0.33 * psi));
+                MessageBox.Show(Convert.ToString(psiCalc));
+                
+            }
+            else if (psi <= -1)
+            {
+                psiCalc = (62 * epsilon * (1.0 + Math.Abs(psi)) * (Math.Sqrt(Math.Abs(psi))));
+                MessageBox.Show(Convert.ToString(psiCalc));
+            }
+        }
 
         public bool iCalc(profileClass v)
         {
@@ -247,6 +264,7 @@ namespace ToolBeam.classes
                         MessageBox.Show(Convert.ToString(alpha));
                         if (alpha > 0)
                         {
+
                             if (alpha > 0.5)
                             {
                                 //sprawdzanie dla klasy 1 i 2
@@ -264,9 +282,8 @@ namespace ToolBeam.classes
                                 else
                                 //srodnik nie spelnia warunkow klasy 2. Nalezy wyznaczyc smuklosc graniczna scianki klasy 3 przyjmujac sprezysty rozklad naprezen.
                                 {
-                                    //MessageBox.Show("sprezysty ?");
-                                    psi = ((2 * Convert.ToInt16(force) * 1000) / Convert.ToInt16(aVar) * 100 * Convert.ToInt16(fyVar)) - 1;
-                                    MessageBox.Show(Convert.ToString(psi));
+                                    psiFunction();
+                                    
                                 }
 
                             }
@@ -285,13 +302,13 @@ namespace ToolBeam.classes
                                 }
                                 else
                                 {
-                                    psi = ((2 * Convert.ToInt16(force) * 1000) / Convert.ToInt16(aVar) * 100 * Convert.ToInt16(fyVar)) - 1;
-                                    MessageBox.Show(Convert.ToString(psi));
+                                    psiFunction();
                                 }
 
                             }
 
                         }
+                        
 
 }
 
