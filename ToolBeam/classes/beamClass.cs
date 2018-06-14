@@ -34,6 +34,7 @@ namespace ToolBeam.classes
         public double psi { get; set; }
         public double psiCalc { get; set; }
 
+        //
         public void psiFunction()
         {
             //MessageBox.Show("sprezysty ?");
