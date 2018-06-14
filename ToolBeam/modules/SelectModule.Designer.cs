@@ -35,11 +35,13 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.bCrossSectionClassification);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button5);
@@ -110,6 +112,15 @@
             this.button1.Text = "Profile database";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(6, 191);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(200, 80);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "New Rules module";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // SelectModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,5 +144,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button6;
     }
 }

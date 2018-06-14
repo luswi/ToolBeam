@@ -40,6 +40,7 @@
             this.tfVar = new System.Windows.Forms.TextBox();
             this.rVar = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbArea = new System.Windows.Forms.TextBox();
             this.lbUnit = new System.Windows.Forms.Label();
             this.lbCf = new System.Windows.Forms.Label();
             this.tbCf = new System.Windows.Forms.TextBox();
@@ -71,7 +72,7 @@
             this.lbEpsilonVar = new System.Windows.Forms.Label();
             this.b_Back = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.tbArea = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -164,6 +165,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.tbArea);
             this.groupBox1.Controls.Add(this.lbUnit);
             this.groupBox1.Controls.Add(this.lbCf);
@@ -198,6 +200,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input";
             // 
+            // tbArea
+            // 
+            this.tbArea.Location = new System.Drawing.Point(110, 302);
+            this.tbArea.Name = "tbArea";
+            this.tbArea.Size = new System.Drawing.Size(100, 20);
+            this.tbArea.TabIndex = 25;
+            this.tbArea.Text = "0";
+            // 
             // lbUnit
             // 
             this.lbUnit.AutoSize = true;
@@ -223,7 +233,7 @@
             // tbCf
             // 
             this.tbCf.Location = new System.Drawing.Point(110, 256);
-            this.tbCf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCf.Margin = new System.Windows.Forms.Padding(2);
             this.tbCf.Name = "tbCf";
             this.tbCf.Size = new System.Drawing.Size(76, 20);
             this.tbCf.TabIndex = 22;
@@ -234,7 +244,7 @@
             // 
             this.rbBendingCompression.AutoSize = true;
             this.rbBendingCompression.Location = new System.Drawing.Point(158, 19);
-            this.rbBendingCompression.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbBendingCompression.Margin = new System.Windows.Forms.Padding(2);
             this.rbBendingCompression.Name = "rbBendingCompression";
             this.rbBendingCompression.Size = new System.Drawing.Size(136, 17);
             this.rbBendingCompression.TabIndex = 21;
@@ -246,7 +256,7 @@
             // 
             this.rbCompression.AutoSize = true;
             this.rbCompression.Location = new System.Drawing.Point(74, 19);
-            this.rbCompression.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbCompression.Margin = new System.Windows.Forms.Padding(2);
             this.rbCompression.Name = "rbCompression";
             this.rbCompression.Size = new System.Drawing.Size(85, 17);
             this.rbCompression.TabIndex = 20;
@@ -259,7 +269,7 @@
             this.rbBending.AutoSize = true;
             this.rbBending.Checked = true;
             this.rbBending.Location = new System.Drawing.Point(12, 19);
-            this.rbBending.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbBending.Margin = new System.Windows.Forms.Padding(2);
             this.rbBending.Name = "rbBending";
             this.rbBending.Size = new System.Drawing.Size(64, 17);
             this.rbBending.TabIndex = 19;
@@ -411,7 +421,7 @@
             // lbFlangeClassVar
             // 
             this.lbFlangeClassVar.AutoSize = true;
-            this.lbFlangeClassVar.Location = new System.Drawing.Point(82, 130);
+            this.lbFlangeClassVar.Location = new System.Drawing.Point(76, 130);
             this.lbFlangeClassVar.Name = "lbFlangeClassVar";
             this.lbFlangeClassVar.Size = new System.Drawing.Size(32, 13);
             this.lbFlangeClassVar.TabIndex = 24;
@@ -429,7 +439,7 @@
             // lbFlangeVar
             // 
             this.lbFlangeVar.AutoSize = true;
-            this.lbFlangeVar.Location = new System.Drawing.Point(70, 104);
+            this.lbFlangeVar.Location = new System.Drawing.Point(76, 104);
             this.lbFlangeVar.Name = "lbFlangeVar";
             this.lbFlangeVar.Size = new System.Drawing.Size(32, 13);
             this.lbFlangeVar.TabIndex = 22;
@@ -447,7 +457,7 @@
             // lbWebClassVar
             // 
             this.lbWebClassVar.AutoSize = true;
-            this.lbWebClassVar.Location = new System.Drawing.Point(70, 87);
+            this.lbWebClassVar.Location = new System.Drawing.Point(76, 87);
             this.lbWebClassVar.Name = "lbWebClassVar";
             this.lbWebClassVar.Size = new System.Drawing.Size(32, 13);
             this.lbWebClassVar.TabIndex = 20;
@@ -465,7 +475,7 @@
             // lbWebVar
             // 
             this.lbWebVar.AutoSize = true;
-            this.lbWebVar.Location = new System.Drawing.Point(56, 62);
+            this.lbWebVar.Location = new System.Drawing.Point(76, 62);
             this.lbWebVar.Name = "lbWebVar";
             this.lbWebVar.Size = new System.Drawing.Size(32, 13);
             this.lbWebVar.TabIndex = 18;
@@ -492,7 +502,7 @@
             // lbEpsilonVar
             // 
             this.lbEpsilonVar.AutoSize = true;
-            this.lbEpsilonVar.Location = new System.Drawing.Point(56, 35);
+            this.lbEpsilonVar.Location = new System.Drawing.Point(76, 35);
             this.lbEpsilonVar.Name = "lbEpsilonVar";
             this.lbEpsilonVar.Size = new System.Drawing.Size(32, 13);
             this.lbEpsilonVar.TabIndex = 15;
@@ -508,13 +518,16 @@
             this.b_Back.UseVisualStyleBackColor = true;
             this.b_Back.Click += new System.EventHandler(this.b_Back_Click);
             // 
-            // tbArea
+            // label13
             // 
-            this.tbArea.Location = new System.Drawing.Point(110, 302);
-            this.tbArea.Name = "tbArea";
-            this.tbArea.Size = new System.Drawing.Size(100, 20);
-            this.tbArea.TabIndex = 25;
-            this.tbArea.Text = "0";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(10, 305);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(29, 13);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Area";
+            this.label13.Visible = false;
             // 
             // iSectionForm
             // 
@@ -582,5 +595,6 @@
         private System.Windows.Forms.Label lbCf;
         private System.Windows.Forms.TextBox tbCf;
         private System.Windows.Forms.TextBox tbArea;
+        private System.Windows.Forms.Label label13;
     }
 }
