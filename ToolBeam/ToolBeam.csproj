@@ -52,6 +52,12 @@
     <Compile Include="modules\Help\csHelp.Designer.cs">
       <DependentUpon>csHelp.cs</DependentUpon>
     </Compile>
+    <Compile Include="modules\LiftingLugTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\LiftingLugTypes.Designer.cs">
+      <DependentUpon>LiftingLugTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="modules\SelectModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="modules\Help\csHelp.resx">
       <DependentUpon>csHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modules\LiftingLugTypes.resx">
+      <DependentUpon>LiftingLugTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modules\SelectModule.resx">
       <DependentUpon>SelectModule.cs</DependentUpon>
@@ -139,6 +148,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\LLT1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\LLT2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\LLT3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\LT1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\LT2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\LT3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

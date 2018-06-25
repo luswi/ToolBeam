@@ -31,5 +31,16 @@ namespace ToolBeam.modules
 
 
         }
+
+        private void bLiftingLug_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            modules.LiftingLugTypes liftingLugTypes = new modules.LiftingLugTypes();
+            liftingLugTypes.TopLevel = false;
+            liftingLugTypes.AutoScroll = true;
+            this.Controls.Add(liftingLugTypes);
+            liftingLugTypes.Dock = DockStyle.Fill;
+            liftingLugTypes.Show();
+        }
     }
 }
