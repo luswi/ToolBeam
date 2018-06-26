@@ -42,5 +42,16 @@ namespace ToolBeam.modules
             liftingLugTypes.Dock = DockStyle.Fill;
             liftingLugTypes.Show();
         }
+
+        private void bUnitConverter_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            modules.UnitConverter unitConverter = new modules.UnitConverter();
+            unitConverter.TopLevel = false;
+            unitConverter.AutoScroll = true;
+            this.Controls.Add(unitConverter);
+            unitConverter.Dock = DockStyle.Fill;
+            unitConverter.Show();
+        }
     }
 }
