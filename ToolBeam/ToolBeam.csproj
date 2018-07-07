@@ -176,5 +176,8 @@
   <ItemGroup>
     <None Include="img\LT3.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\convert.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
