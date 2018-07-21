@@ -15,16 +15,55 @@ namespace ToolBeam.modules
         public UnitConverter()
         {
             InitializeComponent();
-            units();
         }
-        public void units()
+        public void unitsInput()
         {
-            lbUnitTypes.Items.Add("Pressure");
-            lbUnitTypes.Items.Add("Force");
-            lbUnitTypes.Items.Add("Torque");
             if((string)lbUnitTypes.SelectedItem == "Pressure")
             {
-                lbUnitInput.Items.Add("suuper");
+                lbUnitInput.Items.Clear();
+                lbUnitInput.Items.Add("A");
+                lbUnitInput.Items.Add("B");
+                lbUnitInput.Items.Add("C");
+            }
+            else if((string)lbUnitTypes.SelectedItem == "Force")
+            {
+                lbUnitInput.Items.Clear();
+                lbUnitInput.Items.Add("Force selected...");
+            }
+            else if((string)lbUnitTypes.SelectedItem == "Torque")
+            {
+                lbUnitInput.Items.Clear();
+                lbUnitInput.Items.Add("Torque selected...");
+            }
+            else if((string)lbUnitTypes.SelectedItem == "Mass")
+            {
+                lbUnitInput.Items.Clear();
+                lbUnitInput.Items.Add("kg");
+
+            }
+           
+        }
+        public void unitsOutput()
+        {
+            if ((string)lbUnitInput.SelectedItem == "A")
+            {
+                lbUnitOutput.Items.Clear();
+                lbUnitOutput.Items.Add("AAA");
+            }
+            else if ((string)lbUnitInput.SelectedItem == "B")
+            {
+                lbUnitOutput.Items.Clear();
+                lbUnitOutput.Items.Add("BBB");
+            }
+            else if ((string)lbUnitInput.SelectedItem == "C")
+            {
+                lbUnitOutput.Items.Clear();
+                lbUnitOutput.Items.Add("CCC");
+            }
+            else if((string)lbUnitInput.SelectedItem == "kg")
+            {
+                lbUnitOutput.Items.Clear();
+                lbUnitOutput.Items.Add("N");
             }
         }
         private void b_Back_Click(object sender, EventArgs e)
@@ -42,7 +81,12 @@ namespace ToolBeam.modules
 
         private void lbUnitTypes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            units();
+           unitsInput();
+        }
+
+        private void lbUnitInput_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            unitsOutput();
         }
     }
 }
