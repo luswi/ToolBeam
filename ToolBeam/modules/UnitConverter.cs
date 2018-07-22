@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolBeam.classes;
 
 namespace ToolBeam.modules
 {
@@ -16,6 +17,8 @@ namespace ToolBeam.modules
         {
             InitializeComponent();
         }
+        unitClass v = new unitClass();
+
         public void unitsInput()
         {
             if((string)lbUnitTypes.SelectedItem == "Pressure")
@@ -87,6 +90,22 @@ namespace ToolBeam.modules
         private void lbUnitInput_SelectedIndexChanged(object sender, EventArgs e)
         {
             unitsOutput();
+        }
+
+        private void tbValueInput_TextChanged(object sender, EventArgs e)
+        {
+            v.ValueInput = double.Parse(tbValueInput.Text);
+            v.ValueOutput = double.Parse(tbValueOutput.Text);
+            v.unitInput = double.Parse(lbUnitInput.Text);
+            v.unitOutput = double.Parse(lbUnitOutput.Text);
+
+            //results
+            bool success = v.unitConverter(v);
+            if(success == true)
+            {
+                lbUnitOutput.Text = Convert.ToString(v.conversion);
+            }
+
         }
     }
 }

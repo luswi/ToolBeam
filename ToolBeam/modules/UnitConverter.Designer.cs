@@ -31,9 +31,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbValueOutput = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbValueInput = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lbUnitOutput = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -81,7 +81,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.textBox2);
+            this.groupBox6.Controls.Add(this.tbValueOutput);
             this.groupBox6.Location = new System.Drawing.Point(631, 346);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox6.Name = "groupBox6";
@@ -91,17 +91,17 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Output Value";
             // 
-            // textBox2
+            // tbValueOutput
             // 
-            this.textBox2.Location = new System.Drawing.Point(9, 29);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(280, 26);
-            this.textBox2.TabIndex = 12;
+            this.tbValueOutput.Location = new System.Drawing.Point(9, 29);
+            this.tbValueOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbValueOutput.Name = "tbValueOutput";
+            this.tbValueOutput.Size = new System.Drawing.Size(280, 26);
+            this.tbValueOutput.TabIndex = 12;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox1);
+            this.groupBox5.Controls.Add(this.tbValueInput);
             this.groupBox5.Location = new System.Drawing.Point(323, 346);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox5.Name = "groupBox5";
@@ -111,13 +111,14 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Input Value";
             // 
-            // textBox1
+            // tbValueInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 29);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 26);
-            this.textBox1.TabIndex = 11;
+            this.tbValueInput.Location = new System.Drawing.Point(9, 29);
+            this.tbValueInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbValueInput.Name = "tbValueInput";
+            this.tbValueInput.Size = new System.Drawing.Size(280, 26);
+            this.tbValueInput.TabIndex = 11;
+            this.tbValueInput.TextChanged += new System.EventHandler(this.tbValueInput_TextChanged);
             // 
             // groupBox4
             // 
@@ -234,9 +235,9 @@
         private System.Windows.Forms.ListBox lbUnitOutput;
         private System.Windows.Forms.ListBox lbUnitInput;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbValueOutput;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbValueInput;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
