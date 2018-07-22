@@ -22,7 +22,7 @@ namespace ToolBeam.classes
             {
                 isSuccess = true;
 
-                double conversion = ValueInput * 5;
+                conversion = 6 * 5;
 
             }
             else

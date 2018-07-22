@@ -96,14 +96,14 @@ namespace ToolBeam.modules
         {
             v.ValueInput = double.Parse(tbValueInput.Text);
             v.ValueOutput = double.Parse(tbValueOutput.Text);
-            v.unitInput = double.Parse(lbUnitInput.Text);
-            v.unitOutput = double.Parse(lbUnitOutput.Text);
+            //v.unitInput = double.Parse(lbUnitInput.Text);
+            //v.unitOutput = double.Parse(lbUnitOutput.Text);
 
             //results
             bool success = v.unitConverter(v);
             if(success == true)
             {
-                lbUnitOutput.Text = Convert.ToString(v.conversion);
+                tbValueOutput.Text = Convert.ToString(v.conversion);
             }
 
         }
