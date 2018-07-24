@@ -119,6 +119,7 @@
             this.tbValueInput.Size = new System.Drawing.Size(280, 26);
             this.tbValueInput.TabIndex = 11;
             this.tbValueInput.TextChanged += new System.EventHandler(this.tbValueInput_TextChanged);
+            this.tbValueInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbValueInput_KeyPress);
             // 
             // groupBox4
             // 

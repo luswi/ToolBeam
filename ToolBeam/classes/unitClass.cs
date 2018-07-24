@@ -3,26 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ToolBeam.classes
 {
     class unitClass
     {
         // Variables used for calculations
-        public double unitInput { get; set; }
-        public double unitOutput { get; set; }
+        public string unitInput { get; set; }
+        public string unitOutput { get; set; }
         public double ValueInput { get; set; }
-        public double ValueOutput { get; set; }
+        //public double ValueOutput { get; set; }
         public double conversion { get; set; }
 
         public bool unitConverter(unitClass v)
         {
             bool isSuccess = false;
-            if ( unitInput > 0 )
+            if ( ValueInput != 0)
             {
                 isSuccess = true;
 
-                conversion = 6 * 5;
+                if (unitInput == "kg" & unitOutput == "N")
+                { conversion = ValueInput * 9.8066500286389; }
+                else if (unitInput == "N" & unitOutput == "kg")
+                { conversion = ValueInput / 9.8066500286389; }
+                else if (unitInput == "tonne" & unitOutput == "kN")
+                { }
+                else if (unitInput == "kN" & unitOutput == "tonne")
+                { }
+                else
+                {
+                    MessageBox.Show("UPS!");
+                }
 
             }
             else

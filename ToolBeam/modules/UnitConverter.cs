@@ -42,6 +42,9 @@ namespace ToolBeam.modules
             {
                 lbUnitInput.Items.Clear();
                 lbUnitInput.Items.Add("kg");
+                lbUnitInput.Items.Add("N");
+                lbUnitInput.Items.Add("tonne");
+                lbUnitInput.Items.Add("kN");
 
             }
            
@@ -63,10 +66,14 @@ namespace ToolBeam.modules
                 lbUnitOutput.Items.Clear();
                 lbUnitOutput.Items.Add("CCC");
             }
-            else if((string)lbUnitInput.SelectedItem == "kg")
+            else if((string)lbUnitInput.SelectedItem == "kg" || (string)lbUnitInput.SelectedItem == "N" || (string)lbUnitInput.SelectedItem == "tonne" || (string)lbUnitInput.SelectedItem == "kN")
             {
                 lbUnitOutput.Items.Clear();
+                lbUnitOutput.Items.Add("kg");
                 lbUnitOutput.Items.Add("N");
+                lbUnitOutput.Items.Add("tonne");
+                lbUnitOutput.Items.Add("kN");
+
             }
         }
         private void b_Back_Click(object sender, EventArgs e)
@@ -95,9 +102,9 @@ namespace ToolBeam.modules
         private void tbValueInput_TextChanged(object sender, EventArgs e)
         {
             v.ValueInput = double.Parse(tbValueInput.Text);
-            v.ValueOutput = double.Parse(tbValueOutput.Text);
-            //v.unitInput = double.Parse(lbUnitInput.Text);
-            //v.unitOutput = double.Parse(lbUnitOutput.Text);
+            //v.ValueOutput = double.Parse(tbValueOutput.Text);
+            v.unitInput = lbUnitInput.Text;
+            v.unitOutput = lbUnitOutput.Text;
 
             //results
             bool success = v.unitConverter(v);
@@ -105,7 +112,18 @@ namespace ToolBeam.modules
             {
                 tbValueOutput.Text = Convert.ToString(v.conversion);
             }
+            else
+            {
+                MessageBox.Show("cos poszlo zle");
+            }
 
         }
+
+        private void tbValueInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //only digit
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
     }
 }
