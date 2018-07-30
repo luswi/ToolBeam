@@ -28,9 +28,9 @@ namespace ToolBeam.classes
                 else if (unitInput == "N" & unitOutput == "kg")
                 { conversion = ValueInput / 9.8066500286389; }
                 else if (unitInput == "tonne" & unitOutput == "kN")
-                { }
+                { conversion = ValueInput * 9.964016384; }
                 else if (unitInput == "kN" & unitOutput == "tonne")
-                { }
+                { conversion = ValueInput / 9.964016384; }
                 else
                 {
                     MessageBox.Show("UPS!");

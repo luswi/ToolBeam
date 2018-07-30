@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bUnitConverter = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.bCrossSectionClassification = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -36,12 +37,13 @@
             this.button3 = new System.Windows.Forms.Button();
             this.bLiftingLug = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.bUnitConverter = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.bUnitConverter);
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.bCrossSectionClassification);
@@ -57,6 +59,17 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select module";
+            // 
+            // bUnitConverter
+            // 
+            this.bUnitConverter.BackColor = System.Drawing.Color.Chartreuse;
+            this.bUnitConverter.Location = new System.Drawing.Point(212, 191);
+            this.bUnitConverter.Name = "bUnitConverter";
+            this.bUnitConverter.Size = new System.Drawing.Size(200, 80);
+            this.bUnitConverter.TabIndex = 11;
+            this.bUnitConverter.Text = "Unit Converter";
+            this.bUnitConverter.UseVisualStyleBackColor = false;
+            this.bUnitConverter.Click += new System.EventHandler(this.bUnitConverter_Click);
             // 
             // button6
             // 
@@ -125,16 +138,15 @@
             this.button1.Text = "Profile database";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // bUnitConverter
+            // button2
             // 
-            this.bUnitConverter.BackColor = System.Drawing.Color.Chartreuse;
-            this.bUnitConverter.Location = new System.Drawing.Point(212, 191);
-            this.bUnitConverter.Name = "bUnitConverter";
-            this.bUnitConverter.Size = new System.Drawing.Size(200, 80);
-            this.bUnitConverter.TabIndex = 11;
-            this.bUnitConverter.Text = "Unit Converter";
-            this.bUnitConverter.UseVisualStyleBackColor = false;
-            this.bUnitConverter.Click += new System.EventHandler(this.bUnitConverter_Click);
+            this.button2.BackColor = System.Drawing.Color.Coral;
+            this.button2.Location = new System.Drawing.Point(418, 191);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 80);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Crane foundation";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // SelectModule
             // 
@@ -161,5 +173,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button bUnitConverter;
+        private System.Windows.Forms.Button button2;
     }
 }

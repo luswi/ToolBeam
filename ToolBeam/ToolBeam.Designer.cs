@@ -82,7 +82,7 @@
             this.lbTop.Name = "lbTop";
             this.lbTop.Size = new System.Drawing.Size(372, 20);
             this.lbTop.TabIndex = 0;
-            this.lbTop.Text = "ToolBeam [PN-EN 1993-1] && [NORSOK] v.007";
+            this.lbTop.Text = "ToolBeam [PN-EN 1993-1] && [NORSOK] v.010";
             // 
             // panelMain
             // 

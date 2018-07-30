@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>img\vessel.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,6 +50,12 @@
   <ItemGroup>
     <Compile Include="classes\beamClass.cs" />
     <Compile Include="classes\unitClass.cs" />
+    <Compile Include="modules\CraneFoundation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\CraneFoundation.Designer.cs">
+      <DependentUpon>CraneFoundation.cs</DependentUpon>
+    </Compile>
     <Compile Include="modules\Help\csHelp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +100,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="modules\CraneFoundation.resx">
+      <DependentUpon>CraneFoundation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="modules\Help\csHelp.resx">
       <DependentUpon>csHelp.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\convert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\vessel.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

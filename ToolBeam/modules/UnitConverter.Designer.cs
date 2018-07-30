@@ -59,11 +59,9 @@
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.b_Back);
-            this.groupBox1.Location = new System.Drawing.Point(4, 8);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Location = new System.Drawing.Point(3, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(1188, 522);
+            this.groupBox1.Size = new System.Drawing.Size(792, 339);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Unit Converter";
@@ -71,10 +69,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ToolBeam.Properties.Resources.convert;
-            this.pictureBox1.Location = new System.Drawing.Point(991, 59);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(661, 38);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 154);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
@@ -82,41 +79,36 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.tbValueOutput);
-            this.groupBox6.Location = new System.Drawing.Point(631, 346);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox6.Location = new System.Drawing.Point(421, 225);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox6.Size = new System.Drawing.Size(300, 78);
+            this.groupBox6.Size = new System.Drawing.Size(200, 51);
             this.groupBox6.TabIndex = 17;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Output Value";
             // 
             // tbValueOutput
             // 
-            this.tbValueOutput.Location = new System.Drawing.Point(9, 29);
-            this.tbValueOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbValueOutput.Location = new System.Drawing.Point(6, 19);
             this.tbValueOutput.Name = "tbValueOutput";
-            this.tbValueOutput.Size = new System.Drawing.Size(280, 26);
+            this.tbValueOutput.ReadOnly = true;
+            this.tbValueOutput.Size = new System.Drawing.Size(188, 20);
             this.tbValueOutput.TabIndex = 12;
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.tbValueInput);
-            this.groupBox5.Location = new System.Drawing.Point(323, 346);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox5.Location = new System.Drawing.Point(215, 225);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox5.Size = new System.Drawing.Size(300, 78);
+            this.groupBox5.Size = new System.Drawing.Size(200, 51);
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Input Value";
             // 
             // tbValueInput
             // 
-            this.tbValueInput.Location = new System.Drawing.Point(9, 29);
-            this.tbValueInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbValueInput.Location = new System.Drawing.Point(6, 19);
             this.tbValueInput.Name = "tbValueInput";
-            this.tbValueInput.Size = new System.Drawing.Size(280, 26);
+            this.tbValueInput.Size = new System.Drawing.Size(188, 20);
             this.tbValueInput.TabIndex = 11;
             this.tbValueInput.TextChanged += new System.EventHandler(this.tbValueInput_TextChanged);
             this.tbValueInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbValueInput_KeyPress);
@@ -124,11 +116,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.lbUnitOutput);
-            this.groupBox4.Location = new System.Drawing.Point(631, 29);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox4.Location = new System.Drawing.Point(421, 19);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox4.Size = new System.Drawing.Size(300, 308);
+            this.groupBox4.Size = new System.Drawing.Size(200, 200);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Output";
@@ -136,21 +126,17 @@
             // lbUnitOutput
             // 
             this.lbUnitOutput.FormattingEnabled = true;
-            this.lbUnitOutput.ItemHeight = 20;
-            this.lbUnitOutput.Location = new System.Drawing.Point(9, 29);
-            this.lbUnitOutput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lbUnitOutput.Location = new System.Drawing.Point(6, 19);
             this.lbUnitOutput.Name = "lbUnitOutput";
-            this.lbUnitOutput.Size = new System.Drawing.Size(280, 264);
+            this.lbUnitOutput.Size = new System.Drawing.Size(188, 173);
             this.lbUnitOutput.TabIndex = 10;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lbUnitInput);
-            this.groupBox3.Location = new System.Drawing.Point(323, 29);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Location = new System.Drawing.Point(215, 19);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(300, 308);
+            this.groupBox3.Size = new System.Drawing.Size(200, 200);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Input";
@@ -158,22 +144,18 @@
             // lbUnitInput
             // 
             this.lbUnitInput.FormattingEnabled = true;
-            this.lbUnitInput.ItemHeight = 20;
-            this.lbUnitInput.Location = new System.Drawing.Point(9, 29);
-            this.lbUnitInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lbUnitInput.Location = new System.Drawing.Point(6, 19);
             this.lbUnitInput.Name = "lbUnitInput";
-            this.lbUnitInput.Size = new System.Drawing.Size(280, 264);
+            this.lbUnitInput.Size = new System.Drawing.Size(188, 173);
             this.lbUnitInput.TabIndex = 9;
             this.lbUnitInput.SelectedIndexChanged += new System.EventHandler(this.lbUnitInput_SelectedIndexChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lbUnitTypes);
-            this.groupBox2.Location = new System.Drawing.Point(14, 29);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Location = new System.Drawing.Point(9, 19);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(300, 308);
+            this.groupBox2.Size = new System.Drawing.Size(200, 200);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Unit Types";
@@ -181,25 +163,22 @@
             // lbUnitTypes
             // 
             this.lbUnitTypes.FormattingEnabled = true;
-            this.lbUnitTypes.ItemHeight = 20;
             this.lbUnitTypes.Items.AddRange(new object[] {
             "Pressure",
             "Force",
             "Torque",
             "Mass"});
-            this.lbUnitTypes.Location = new System.Drawing.Point(9, 29);
-            this.lbUnitTypes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lbUnitTypes.Location = new System.Drawing.Point(6, 19);
             this.lbUnitTypes.Name = "lbUnitTypes";
-            this.lbUnitTypes.Size = new System.Drawing.Size(280, 264);
+            this.lbUnitTypes.Size = new System.Drawing.Size(188, 173);
             this.lbUnitTypes.TabIndex = 8;
             this.lbUnitTypes.SelectedIndexChanged += new System.EventHandler(this.lbUnitTypes_SelectedIndexChanged);
             // 
             // b_Back
             // 
-            this.b_Back.Location = new System.Drawing.Point(14, 478);
-            this.b_Back.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.b_Back.Location = new System.Drawing.Point(9, 311);
             this.b_Back.Name = "b_Back";
-            this.b_Back.Size = new System.Drawing.Size(112, 35);
+            this.b_Back.Size = new System.Drawing.Size(75, 23);
             this.b_Back.TabIndex = 7;
             this.b_Back.Text = "Back";
             this.b_Back.UseVisualStyleBackColor = true;
@@ -207,12 +186,11 @@
             // 
             // UnitConverter
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 539);
+            this.ClientSize = new System.Drawing.Size(800, 350);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UnitConverter";
             this.Text = "UnitConverter";
             this.groupBox1.ResumeLayout(false);

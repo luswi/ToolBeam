@@ -101,7 +101,15 @@ namespace ToolBeam.modules
 
         private void tbValueInput_TextChanged(object sender, EventArgs e)
         {
-            v.ValueInput = double.Parse(tbValueInput.Text);
+            if(tbValueInput.Text.Trim() == string.Empty)
+            {
+                v.ValueInput = 0;
+            }
+            else
+            {
+                v.ValueInput = double.Parse(tbValueInput.Text);
+            }
+            
             //v.ValueOutput = double.Parse(tbValueOutput.Text);
             v.unitInput = lbUnitInput.Text;
             v.unitOutput = lbUnitOutput.Text;
@@ -114,7 +122,8 @@ namespace ToolBeam.modules
             }
             else
             {
-                MessageBox.Show("cos poszlo zle");
+                tbValueOutput.Clear();
+                //MessageBox.Show("cos poszlo zle");
             }
 
         }
