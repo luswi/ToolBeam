@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToolBeam.classes;
@@ -23,14 +25,13 @@ namespace ToolBeam.modules
 
         private void bCalculateClass_Click(object sender, EventArgs e)
         {
-
             // Pick up values from text boxes
             v.hVar = double.Parse(hVar.Text);
             v.bVar = double.Parse(bVar.Text);
-            v.tfVar = double.Parse(tfVar.Text);
+            v.tfVar = double.Parse(tfVar.Text);//
             v.material = cbMaterialSelection.SelectedItem.ToString();
             v.rVar = double.Parse(rVar.Text);
-            v.twVar = double.Parse(twVar.Text);
+            v.twVar = double.Parse(twVar.Text);//
             v.rbBending = rbBending.Checked;
             v.rbCompression = rbCompression.Checked;
             v.rbBendingCompression = rbBendingCompression.Checked;
@@ -298,5 +299,7 @@ namespace ToolBeam.modules
             tbCf.Visible = true;
             bCalculateClass.PerformClick();
         }
+
+
     }
 }

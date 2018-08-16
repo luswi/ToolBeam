@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4065387E-E121-4081-89C9-E705C747833C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ToolBeam</RootNamespace>
+    <AssemblyName>ToolBeam</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>img\vessel.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\beamClass.cs" />
+    <Compile Include="classes\unitClass.cs" />
+    <Compile Include="modules\CraneFoundation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\CraneFoundation.Designer.cs">
+      <DependentUpon>CraneFoundation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modules\Help\csHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\Help\csHelp.Designer.cs">
+      <DependentUpon>csHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modules\LiftingLugTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\LiftingLugTypes.Designer.cs">
+      <DependentUpon>LiftingLugTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modules\SelectModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\SelectModule.Designer.cs">
+      <DependentUpon>SelectModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modules\UnitConverter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\UnitConverter.Designer.cs">
+      <DependentUpon>UnitConverter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolBeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolBeam.Designer.cs">
+      <DependentUpon>ToolBeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modules\CrossSectionClassificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\CrossSectionClassificationForm.Designer.cs">
+      <DependentUpon>CrossSectionClassificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modules\iSectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\iSectionForm.Designer.cs">
+      <DependentUpon>iSectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="modules\CraneFoundation.resx">
+      <DependentUpon>CraneFoundation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modules\Help\csHelp.resx">
+      <DependentUpon>csHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modules\LiftingLugTypes.resx">
+      <DependentUpon>LiftingLugTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modules\SelectModule.resx">
+      <DependentUpon>SelectModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modules\UnitConverter.resx">
+      <DependentUpon>UnitConverter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolBeam.resx">
+      <DependentUpon>ToolBeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modules\CrossSectionClassificationForm.resx">
+      <DependentUpon>CrossSectionClassificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modules\iSectionForm.resx">
+      <DependentUpon>iSectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CSclasses.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\CSclasses.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\hSection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\bSection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\uSection.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\hDim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\LLT1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\LLT2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\LLT3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\LT1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\LT2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\LT3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\convert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\vessel.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

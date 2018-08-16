@@ -40,6 +40,7 @@
             this.tfVar = new System.Windows.Forms.TextBox();
             this.rVar = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tbArea = new System.Windows.Forms.TextBox();
             this.lbUnit = new System.Windows.Forms.Label();
             this.lbCf = new System.Windows.Forms.Label();
@@ -72,7 +73,6 @@
             this.lbEpsilonVar = new System.Windows.Forms.Label();
             this.b_Back = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -199,6 +199,17 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(10, 305);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(29, 13);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Area";
+            this.label13.Visible = false;
             // 
             // tbArea
             // 
@@ -517,17 +528,6 @@
             this.b_Back.Text = "Back";
             this.b_Back.UseVisualStyleBackColor = true;
             this.b_Back.Click += new System.EventHandler(this.b_Back_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(10, 305);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(29, 13);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Area";
-            this.label13.Visible = false;
             // 
             // iSectionForm
             // 
